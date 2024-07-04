@@ -1,4 +1,4 @@
-# Data Structures & Algorithms in Pascal
+# Data Structures & Algorithms
 
 ## Introduction
 
