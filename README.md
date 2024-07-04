@@ -22,3 +22,20 @@ Une fonction récursive pour générer le nième nombre de Fibonacci. La séquen
 
 ### 2. Power Function
 Une fonction récursive pour calculer le résultat de l'élévation d'un nombre à une puissance donnée.
+
+## Compilation and Execution
+
+Pour compiler et exécuter ces programmes, vous pouvez utiliser le Free Pascal Compiler (FPC). Par exemple :
+
+```sh
+fpc LeapYearChecker.pas
+./LeapYearChecker
+
+fpc WeatherClothingAdviser.pas
+./WeatherClothingAdviser
+
+fpc FibonacciSequence.pas
+./FibonacciSequence
+
+fpc PowerFunction.pas
+./PowerFunction
