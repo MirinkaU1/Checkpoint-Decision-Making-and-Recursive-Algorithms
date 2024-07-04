@@ -12,8 +12,7 @@ BEGIN
 END
 
 VAR
-    nombre, exposant: INTEGER;
-    resultat: INTEGER;
+    nombre, exposant, resultat: INTEGER;
 BEGIN
     writeln('Entrez le nombre :');
     readln(nombre);
