@@ -25,17 +25,4 @@ Une fonction récursive pour calculer le résultat de l'élévation d'un nombre 
 
 ## Compilation and Execution
 
-Pour compiler et exécuter ces programmes, vous pouvez utiliser le Free Pascal Compiler (FPC). Par exemple :
-
-```sh
-fpc LeapYearChecker.pas
-./LeapYearChecker
-
-fpc WeatherClothingAdviser.pas
-./WeatherClothingAdviser
-
-fpc FibonacciSequence.pas
-./FibonacciSequence
-
-fpc PowerFunction.pas
-./PowerFunction
+Pour compiler et exécuter ces programmes, 👉 https://www.onlinegdb.com/
