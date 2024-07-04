@@ -1,0 +1,27 @@
+ALGORITHM puissanceDunNombre;
+
+FUNCTION puissance(nombre, exposant: INTEGER) : INTEGER
+BEGIN
+    IF (exposant = 0) THEN
+        puissance := 1
+    ELSE_IF (exposant > 0) THEN
+        puissance := nombre * puissance(nombre, exposant - 1)
+    ELSE
+        writeln('Entrée invalide')
+    END_IF
+END
+
+VAR
+    nombre, exposant: INTEGER;
+    resultat: INTEGER;
+BEGIN
+    writeln('Entrez le nombre :');
+    readln(nombre);
+    
+    writeln('Entrez l''exposant :');
+    readln(exposant);
+    
+    resultat := puissance(nombre, puissance);
+    
+    writeln(nombre, ' ^ ', puissance, ' = ', resultat);
+END;

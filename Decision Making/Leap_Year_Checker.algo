@@ -1,0 +1,30 @@
+ALGORITHM AnnéeBissextile;
+
+FUNCTION estBissextile(année: INTEGER) : BOOLEAN;
+BEGIN
+    IF ((année % 4) = 0) THEN
+        IF ((année % 100) = 0) THEN
+            IF ((année % 400) = 0) THEN
+                estBissextile := TRUE
+            ELSE
+                estBissextile := FALSE
+            END_IF;
+        ELSE
+            estBissextile := TRUE
+        END_IF
+    ELSE
+        estBissextile := FALSE
+    END_IF;
+END;
+
+VAR
+    année: INTEGER;
+BEGIN
+    writeln('Entrez une année : ');
+    readln(année);
+    IF (estBissextile(année)) THEN
+        writeln(année, ' est une année bissextile.');
+    ELSE
+        writeln(année, ' n est pas une année bissextile.');
+    END_IF
+END.

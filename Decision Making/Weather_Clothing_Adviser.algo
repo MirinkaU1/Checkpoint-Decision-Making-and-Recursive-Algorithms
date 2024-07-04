@@ -1,0 +1,50 @@
+ALGORITHM ConseilVêtement;
+VAR
+    temperature: INTEGER;
+    reponse: CHAR;
+    isRaining: BOOLEAN;
+BEGIN
+    writeln('Entrez la température actuelle (en degrés Celsius) : ');
+    readln(temperature);
+    
+    writeln('Est-ce qu''il pleut actuellement ? (o/n) : ');
+    readln(reponse);
+    
+    SWITCH (reponse) DO
+        case 'o' : 
+        case 'O' : isRaining = TRUE; break;
+        case 'n':
+        case 'N': isRaining = FALSE; break;
+        default : writeln('Reponse invalide. Utilisez ''o'' pour oui et ''n'' pour non.');
+    END_SWITCH
+
+    IF (temperature > 30) THEN
+        writeln('Il fait chaud.');
+        IF (isRaining) THEN
+            writeln('Portez des vêtements légers et prenez un parapluie.')
+        ELSE
+            writeln('Portez des vêtements légers et des lunettes de soleil.')
+        END_IF;
+    ELSE_IF ((temperature > 25) and (temperature <= 30)) THEN
+        writeln('Il fait modérément chaud.');
+        IF (isRaining) THEN
+            writeln('Portez des vêtements légers et une veste imperméable.')
+        ELSE
+            writeln('Portez des vêtements légers.')
+        END_IF;
+    ELSE_IF ((temperature > 15) and (temperature <= 20)) THEN
+        writeln('Il fait frais.');
+        IF (isRaining) THEN
+            writeln('Portez des vêtements chauds et une veste imperméable.')
+        ELSE
+            writeln('Portez des vêtements chauds.')
+        END_IF;
+    ELSE_IF ((temperature > 5) and (temperature <= 15)) THEN
+        writeln('Il fait très froid.');
+        IF (isRaining) THEN
+            writeln('Portez des vêtements très chauds, imperméables, et prenez un parapluie.')
+        ELSE
+            writeln('Portez des vêtements très chauds.')
+        END_IF
+    END_IF
+END.
